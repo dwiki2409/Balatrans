@@ -9886,3 +9886,71 @@ a.text-dark:hover, a.text-dark:focus {
   height: 100%;
   border: 0;
 }
+
+/* Infirmasu */
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  margin-left: 20px; /* Jarak antara gambar dan teks */
+}
+
+.description-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1.2em;
+  margin-top: 10px; /* Jarak antara title dan description */
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Responsif untuk Desktop */
+@media (min-width: 768px) {
+  .container2 {
+    flex-direction: row-reverse; /* Gambar di sebelah kanan pada desktop */
+  }
+
+  .description-wrapper {
+    text-align: left; /* Teks tetap rata kiri di desktop */
+  }
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 768px) {
+  .container2 {
+    flex-direction: column; /* Di mobile, konten diatur vertikal */
+    text-align: center;
+  }
+
+  .image {
+    margin-left: 0; /* Hapus margin kiri di mobile */
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 1.8em;
+  }
+
+  .description {
+    font-size: 1em;
+  }
+}
